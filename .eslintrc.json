@@ -1,3 +1,93 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "overrides": [
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json",
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "@emotion",
+    "jsx-a11y",
+    "strict-null-checks"
+  ],
+  "rules": {
+    "strict-null-checks/all": "warn",
+    "semi": ["error", "always"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    "react/prop-types": "warn",
+    "react/display-name": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/semi": ["off"],
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/rule-name": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@emotion/jsx-import": "error",
+    "jsx-a11y/rule-name": 2,
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "indent": ["error", 2],
+    "template-curly-spacing": ["error", "never"],
+    "no-void": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    "unicorn/no-array-reduce": "warn",
+    "unicorn/no-null": "off",
+    "unicorn/prefer-query-selector": "warn",
+    "unicorn/no-unsafe-regex": "error",
+    "unicorn/prefer-object-from-entries": "warn",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+         "props": true
+        }
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        },
+        "ignore": [
+          ".*CV.*\\.js$",
+          ".*FAQ.*\\.js$",
+          "service-worker.js"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
