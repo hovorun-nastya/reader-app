@@ -5,7 +5,9 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:unicorn/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "env": {
@@ -28,7 +30,9 @@
     "@typescript-eslint",
     "@emotion",
     "jsx-a11y",
-    "strict-null-checks"
+    "strict-null-checks",
+    "import",
+    "unicorn"
   ],
   "rules": {
     "strict-null-checks/all": "warn",
@@ -46,10 +50,8 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/semi": ["off"],
     "@typescript-eslint/indent": "off",
-    "@typescript-eslint/rule-name": "error",
     "@typescript-eslint/no-floating-promises": "error",
     "@emotion/jsx-import": "error",
-    "jsx-a11y/rule-name": 2,
     "quotes": ["error", "single", { "avoidEscape": true }],
     "jsx-quotes": ["error", "prefer-double"],
     "indent": ["error", 2],

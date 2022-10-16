@@ -1,21 +1,22 @@
-import {PrismaClient} from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   await prisma.user.create({
     data: {
-      email: `testemail@gmail.com`,
-      role: 'ADMIN',
+      email: 'testemail@gmail.com',
+      role: 'USER',
     },
-  })
+  });
 }
 
 main()
-  .catch(e => {
-    console.error(e)
-    process.exit(1)
+  .catch(error => {
+    console.error(error);
+    throw new Error(error);
   })
+  // eslint-disable-next-line unicorn/prefer-top-level-await
   .finally(async () => {
-    await prisma.$disconnect()
-  })
+    await prisma.$disconnect();
+  });
