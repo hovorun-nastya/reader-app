@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import LoginButton from '../components/LoginButton';
-import UserPage from '../components/UserPage';
 
+import UserPage from '../users/[users]'
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>

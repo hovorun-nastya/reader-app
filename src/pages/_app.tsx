@@ -4,11 +4,11 @@ import {ApolloProvider} from '@apollo/client';
 import apolloClient from '../lib/apollo';
 import { SessionProvider } from 'next-auth/react';
 
-function App({ Component, pageProps:{ session, ...pageProperties} }: AppProps) {
+function App({ Component, pageProps:{ session, ...pageProperties } }: AppProps) {
   return(
-    <SessionProvider session={session}>
-      <ApolloProvider client={apolloClient}>
-        <Component {...pageProperties} />
+    <SessionProvider session={ session }>
+      <ApolloProvider client={ apolloClient }>
+        <Component { ...pageProperties } />
       </ApolloProvider>
     </SessionProvider>
   );
