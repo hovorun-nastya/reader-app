@@ -16,7 +16,6 @@ main()
     console.error(error);
     throw new Error(error);
   })
-  // eslint-disable-next-line unicorn/prefer-top-level-await
   .finally(async () => {
     await prisma.$disconnect();
   });
